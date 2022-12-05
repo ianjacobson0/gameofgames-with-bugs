@@ -67,7 +67,7 @@ public class FindTheThimble extends GetInput {
 		while(checkLetter(guess) == false) {
 			guess = Character.toUpperCase(getLetter());
 		}
-
+		System.out.println("Computer's thimble: " + choice[randInt]);
 		if(guess == (choice[randInt])) {
 			System.out.println("You're correct");
 			correct++;
