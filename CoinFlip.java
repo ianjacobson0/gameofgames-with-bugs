@@ -24,7 +24,6 @@ public class CoinFlip {
     }
 
     if (g == result) {
-      w++;
     } else {
       l++;
     }
