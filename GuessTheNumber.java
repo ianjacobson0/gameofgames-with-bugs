@@ -1,5 +1,6 @@
 /*guess the number for GoG assignment
 Author: Colin
+Version: contains bugs
 IMPORTANT NOTE: some of what was said over slack contradicts the orignal use case. In those instances, I went with what was said on slack, as it was more recent.
 */
 import java.util.Scanner;
@@ -43,7 +44,7 @@ public class GuessTheNumber extends GetInput{
         //computer picks random number in the range
         int numberToGuess = random.nextInt(amount);
         // for test version: 
-        //System.out.println(numberToGuess);
+        System.out.println(numberToGuess);
         upperBound = amount;
         boolean gameLoopFlag = true;
         int guessCounter = 0;
@@ -56,7 +57,7 @@ public class GuessTheNumber extends GetInput{
                 System.out.println("Congratulations you won! You correctly guessed that the number was " + numberToGuess);
                 //closes loop
                 gameLoopFlag = false;
-                return 1;
+                return 0;
                 //return user to main menu with updated score (user score++)
 
         }
@@ -66,16 +67,15 @@ public class GuessTheNumber extends GetInput{
             //closes loop
             gameLoopFlag = false;
             //return user to main menu with updated score (computer score++)
-            return 0;
+            return 1;
 
         }
         else{
             
-            if(amount < lowerBound  || amount > upperBound){
+            if(amount < lowerBound){
                 System.out.println("The number is out of range");
             }
             else if (amount != numberToGuess){
-                guessCounter++;
                 int attemptsRemaining = numberofGuesses - guessCounter;
                 System.out.println("Your guess was incorrect, " + amount + " was not the number. Attempts left:" + attemptsRemaining);
             }
