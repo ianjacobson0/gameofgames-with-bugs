@@ -64,10 +64,9 @@ public class FindTheThimble extends GetInput {
 	while (i<best) {
 		System.out.println("Guess Left or Right. Enter L or R: ");
 		guess = Character.toUpperCase(getLetter());
-		while(checkLetter(guess) == false) {
-			guess = Character.toUpperCase(getLetter());
-		}
-		System.out.println("Computer's thimble: " + choice[randInt]);
+// 		while(checkLetter(guess) == false) {
+// 			guess = Character.toUpperCase(getLetter());
+// 		}
 		if(guess == (choice[randInt])) {
 			System.out.println("You're correct");
 			correct++;
@@ -88,9 +87,9 @@ public class FindTheThimble extends GetInput {
 		}
 		System.out.print("Choose Left or Right to hide the thimble. Enter L or R: ");
 		hide = Character.toUpperCase(getLetter());
-		while(checkLetter(hide) == false) {
-			hide = Character.toUpperCase(getLetter());
-		}
+// 		while(checkLetter(hide) == false) {
+// 			hide = Character.toUpperCase(getLetter());
+// 		}
 		System.out.println("Computer guessing: " + choice[cmpRand]);	//print out computer's guess
 		if (choice[cmpRand] == hide) {
 			System.out.println("Computer is correct!");
@@ -141,10 +140,10 @@ public class FindTheThimble extends GetInput {
 
 		
 		if(best%2 == 0) {
-			while (checkOdd(best) == false) {
-				System.out.println("Please re-enter!");
-				best = getNumber();
-			}
+// 			while (checkOdd(best) == false) {
+// 				System.out.println("Please re-enter!");
+// 				best = getNumber();
+// 			}
 			findThimble(best, correct, incorrect, cmpcorrect, cmpincorrect, check, choice, randInt, cmpRand);
 		}
 		else {
