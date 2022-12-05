@@ -8,7 +8,7 @@ public class RedSpool {
     double xFloat = (double) x;
     double probability = xFloat / (float) totalSpools;
     if (rand.nextFloat() < probability) {
-      return true;
+      return false;
     } else if (totalSpools <= 0) {
       System.out.println("Here");
       return true;
